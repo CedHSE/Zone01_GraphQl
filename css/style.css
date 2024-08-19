@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  background: rgb(34,32,36);
+}
+
+.block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  font: italic 1.2rem "Fira Sans", serif;
+  color:white;
+  font-size: 60px;
+  font-weight: 800;
+  text-shadow: gray 2px 2px;
+}
+
+.userInfos {
+  color: white;
+}
+
+.graphDiv {
+  color: white;
+}
+
+.container  { 
+  font: caption;
+  display: block;
+  margin-top: 5%;
+}
+
+.group 	{ 
+  position:relative; 
+  margin-bottom:45px; 
+}
+
+input 	{
+  background-color: rgb(34,32,36);
+  color: white;
+  font: caption;
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid white;
+}
+input:focus { 
+  outline:none; 
+}
+
+label {
+  color: white; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:white;
+}
+
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background: lightgray; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+@-webkit-keyframes inputHighlighter {
+  from { background:white; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:white; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:white; }
+  to 	{ width:0; background:transparent; }
+}
+
+.errorMessage {
+  margin-left: -5%;
+  margin-top: -2%;
+  position:absolute;
+  color: red;
+}
+
+.submitButton {
+  background-color: #2a2a2a;
+	border: 2px solid lightgray;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+  cursor: grab;
+}
+
+.disconnectButton {
+  display: block;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+	border: 2px solid lightgray;
+	border-radius: 4px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+  font: caption;
+  cursor: grab;
+}
+
+.userWelcome {
+  display: block;
+  margin: 0 auto;
+  font: italic 1.2rem "Fira Sans", serif;
+  font-weight: 300;
+  color: white;
+  font-size: 32px;
+  text-shadow: gray 2px 2px;
+  width: 100%;
+}
+
+.userData {
+  color: white;
+}
